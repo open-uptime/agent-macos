@@ -96,7 +96,7 @@ echo "... done."
 
 # Check if the selected branch exists
 echo "Checking branch..."
-if curl -sf --head "https://raw.githubusercontent.com/openuptime/agent-macos/$BRANCH/openuptime_agent.sh" > /dev/null 2>&1
+if curl -sf --head "https://raw.githubusercontent.com/open-uptime/agent-macos/$BRANCH/openuptime_agent.sh" > /dev/null 2>&1
 then
 	echo "Installing from $BRANCH branch..."
 else
@@ -122,7 +122,7 @@ echo "... done."
 
 # Fetching the agent
 echo "Fetching the agent..."
-if ! curl -sf -o /opt/openuptime/openuptime_agent.sh "https://raw.githubusercontent.com/openuptime/agent-macos/$BRANCH/openuptime_agent.sh"
+if ! curl -sf -o /opt/openuptime/openuptime_agent.sh "https://raw.githubusercontent.com/open-uptime/agent-macos/$BRANCH/openuptime_agent.sh"
 then
 	echo "ERROR: Failed to download the agent script from GitHub."
 	exit 1
@@ -131,7 +131,7 @@ echo "... done."
 
 # Fetching the config file
 echo "Fetching the config file..."
-if ! curl -sf -o /opt/openuptime/openuptime.cfg "https://raw.githubusercontent.com/openuptime/agent-macos/$BRANCH/openuptime.cfg"
+if ! curl -sf -o /opt/openuptime/openuptime.cfg "https://raw.githubusercontent.com/open-uptime/agent-macos/$BRANCH/openuptime.cfg"
 then
 	echo "ERROR: Failed to download the agent configuration from GitHub."
 	exit 1
@@ -140,7 +140,7 @@ echo "... done."
 
 # Fetching the wrapper script
 echo "Fetching the wrapper script..."
-if ! curl -sf -o /opt/openuptime/run_agent.sh "https://raw.githubusercontent.com/openuptime/agent-macos/$BRANCH/openuptime_run_agent.sh"
+if ! curl -sf -o /opt/openuptime/run_agent.sh "https://raw.githubusercontent.com/open-uptime/agent-macos/$BRANCH/openuptime_run_agent.sh"
 then
 	echo "ERROR: Failed to download the wrapper script from GitHub."
 	exit 1
